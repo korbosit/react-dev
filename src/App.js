@@ -1,71 +1,25 @@
 import { useState } from 'react';
 import './App.css';
 
-
-// function App() {
-// 	const [count, setCount] = useState(0);
-
-// 	function handleClick () {
-// 		setCount ( count + 1 );
-// 	}
-
-// 	return (
-// 		<button onClick={handleClick}>
-// 			 Clicked {count} times
-// 		</button>
-//   );
-// }
-
-//========================================================================================================================================================
-
-
-// function MyButton() {
-// 	const [count, setCount] = useState(0);
-
-// 	function handleClick() {
-// 		 setCount(count + 1);
-// 	}
-
-// 	return (
-// 		 <button onClick={handleClick}>
-// 			  Clicked {count} times
-// 		 </button>
-// 	);
-// }
-// function App() {
-//    return (
-//       <div>
-//          <h1>Counters that update separately</h1>
-//          <MyButton />
-//          <MyButton />
-//       </div>
-//    );
-// }
-
-//========================================================================================================================================================
-
-function MyButton({count, onClick }) {
+function Profile() {
 	return (
-		<button onClick={onClick}>
-			 Clicked {count} times
-		</button>
-  );
+		<img
+			src="https://i.imgur.com/MK3eW3As.jpg"
+			alt="Katherine Johnson"
+		/>
+	);
 }
 
+
 function App() {
-	const [count, setCount] = useState(0);
-
-	function handleClick() {
-		 setCount(count + 1);
-	}
-
-	return (
-		 <div>
-			  <h1>Counters that update together</h1>
-			  <MyButton count={count} onClick={handleClick} />
-			  <MyButton count={count} onClick={handleClick} />
-		 </div>
-	);
+   return (
+      <section>
+         <h1>Amazing scientists</h1>
+         <Profile />
+         <Profile />
+         <Profile />
+      </section>
+   );
 }
 
 export default App;
