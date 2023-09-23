@@ -8,17 +8,10 @@ const products = [
 ];
 
 function App() {
-   const listItems = products.map((product) => (
-      <li
-         key={product.id}
-         style={{
-            color: product.isFruit ? "magenta" : "darkgreen",
-         }}
-      >
-         {product.title}
-      </li>
-   ));
-   return <ul>{listItems}</ul>;
+	function handleClick() {
+		alert('You clicked me!');
+  }
+   return <button onClick={handleClick}>Click me</button>;
 }
 
 export default App;
