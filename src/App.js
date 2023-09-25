@@ -1,279 +1,392 @@
-import { getImageUrl } from './utils.js';
-
-import Avatar from './Avatar.js';
-
 
 import './App.css';
-import Profile from './Profile.js';
-import Card from './Card.js';
+import { getImageUrl } from './utils';
 
+// const people = [
+// 	'Creola Katherine Johnson: mathematician',
+// 	'Mario José Molina-Pasquel Henríquez: chemist',
+// 	'Mohammad Abdus Salam: physicist',
+// 	'Percy Lavon Julian: chemist',
+// 	'Subrahmanyan Chandrasekhar: astrophysicist',
+// ];
 
 // const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
-// };
 
-// function Item({ name, isPacked }) {
-// 	return <li className="item">{name}</li>;
+// const listItems = people.map((element, index) => {
+// 	return <li key={index}>{element}</li>;
+// });
+
+// return (
+// 	<ul>{listItems}</ul>
+// )
+
 // }
 
 //========================================================================================================================================================
 
+// const people = [
+//    {
+//       id: 0,
+//       name: "Creola Katherine Johnson",
+//       profession: "mathematician",
+//       accomplishment: "spaceflight calculations",
+//       imageId: "MK3eW3A",
+//    },
+//    {
+//       id: 1,
+//       name: "Mario José Molina-Pasquel Henríquez",
+//       profession: "chemist",
+//       accomplishment: "discovery of Arctic ozone hole",
+//       imageId: "mynHUSa",
+//    },
+//    {
+//       id: 2,
+//       name: "Mohammad Abdus Salam",
+//       profession: "physicist",
+//       accomplishment: "electromagnetism theory",
+//       imageId: "bE7W1ji",
+//    },
+//    {
+//       id: 3,
+//       name: "Percy Lavon Julian",
+//       profession: "chemist",
+//       accomplishment:
+//          "pioneering cortisone drugs, steroids and birth control pills",
+//       imageId: "IOjWm71",
+//    },
+//    {
+//       id: 4,
+//       name: "Subrahmanyan Chandrasekhar",
+//       profession: "astrophysicist",
+//       accomplishment: "white dwarf star mass calculations",
+//       imageId: "lrWQx8l",
+//    },
+// ];
+
+
 // const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
+//    const chemists = people.filter((person) => person.profession === "chemist");
+//    const listItems = chemists.map((person) => (
+//       <li>
+//          <img src={getImageUrl(person)} alt={person.name} />
+//          <p>
+//             <b>{person.name}:</b>
+//             {" " + person.profession + " "}
+//             known for {person.accomplishment}
+//          </p>
+//       </li>
+//    ));
+//    return <ul>{listItems}</ul>;
 // };
-
-// function Item({ name, isPacked }) {
-// 	if (isPacked) {
-// 		return <li className="item">{name} ✔</li>;
-// 	}
-
-// 	return <li className="item">{name}</li>;
-// }
-
 
 //========================================================================================================================================================
 
+// const people = [
+//    {
+//       id: 0,
+//       name: "Creola Katherine Johnson",
+//       profession: "mathematician",
+//       accomplishment: "spaceflight calculations",
+//       imageId: "MK3eW3A",
+//    },
+//    {
+//       id: 1,
+//       name: "Mario José Molina-Pasquel Henríquez",
+//       profession: "chemist",
+//       accomplishment: "discovery of Arctic ozone hole",
+//       imageId: "mynHUSa",
+//    },
+//    {
+//       id: 2,
+//       name: "Mohammad Abdus Salam",
+//       profession: "physicist",
+//       accomplishment: "electromagnetism theory",
+//       imageId: "bE7W1ji",
+//    },
+//    {
+//       id: 3,
+//       name: "Percy Lavon Julian",
+//       profession: "chemist",
+//       accomplishment:
+//          "pioneering cortisone drugs, steroids and birth control pills",
+//       imageId: "IOjWm71",
+//    },
+//    {
+//       id: 4,
+//       name: "Subrahmanyan Chandrasekhar",
+//       profession: "astrophysicist",
+//       accomplishment: "white dwarf star mass calculations",
+//       imageId: "lrWQx8l",
+//    },
+// ];
+
+
 // const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
+//    const listItems = people.map((person) => (
+//       <li key={person.id}>
+//          <img src={getImageUrl(person)} alt={person.name} />
+//          <p>
+//             <b>{person.name}:</b>
+//             {" " + person.profession + " "}
+//             known for {person.accomplishment}
+//          </p>
+//       </li>
+//    ));
+//    return <ul>{listItems}</ul>;
 // };
-
-// function Item({ name, isPacked }) {
-// 	if (isPacked) {
-// 		return null;
-// 	}
-
-// 	return <li className="item">{name}</li>;
-// }
 
 //========================================================================================================================================================
 
+// const people = [
+//    {
+//       id: 0,
+//       name: "Creola Katherine Johnson",
+//       profession: "mathematician",
+//       accomplishment: "spaceflight calculations",
+//       imageId: "MK3eW3A",
+//    },
+//    {
+//       id: 1,
+//       name: "Mario José Molina-Pasquel Henríquez",
+//       profession: "chemist",
+//       accomplishment: "discovery of Arctic ozone hole",
+//       imageId: "mynHUSa",
+//    },
+//    {
+//       id: 2,
+//       name: "Mohammad Abdus Salam",
+//       profession: "physicist",
+//       accomplishment: "electromagnetism theory",
+//       imageId: "bE7W1ji",
+//    },
+//    {
+//       id: 3,
+//       name: "Percy Lavon Julian",
+//       profession: "chemist",
+//       accomplishment:
+//          "pioneering cortisone drugs, steroids and birth control pills",
+//       imageId: "IOjWm71",
+//    },
+//    {
+//       id: 4,
+//       name: "Subrahmanyan Chandrasekhar",
+//       profession: "astrophysicist",
+//       accomplishment: "white dwarf star mass calculations",
+//       imageId: "lrWQx8l",
+//    },
+// ];
+
+
 // const App = () => {
+//    const listItems = people.map((person) => (
+//       <li key={person.id}>
+//          <img src={getImageUrl(person)} alt={person.name} />
+//          <p>
+//             <b>{person.name}:</b>
+//             {" " + person.profession + " "}
+//             known for {person.accomplishment}
+//          </p>
+//       </li>
+//    ));
 //    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
+//       <article>
+//          <h1>Scientists</h1>
+//          <ul>{listItems}</ul>
+//       </article>
 //    );
 // };
 
-// function Item({ name, isPacked }) {
-// 	return <li className = "item">
-// 		{isPacked ? name + ' ✔': name}
-// 	</li>
-// }
+// const App = () => {
+// 	// фильтруем химиков и получаем массив химиков
+//    const chemists = people.filter((person) => person.profession === "chemist");
+// 	// фильтруем остальных ученых и получаем массив их
+//    const otherScientists = people.filter(
+//       (person) => person.profession !== "chemist"
+//    );
+	
+// 	// мапим химиков
+//    const chemistItems = chemists.map((person) => (
+//       <li key={person.id}>
+//          <img src={getImageUrl(person)} alt={person.name} />
+//          <p>
+//             <b>{person.name}:</b>
+//             {" " + person.profession + " "}
+//             known for {person.accomplishment}
+//          </p>
+//       </li>
+//    ));
+// 	// мапим остальных ученых
+//    const otherScientistItems = otherScientists.map((person) => (
+//       <li key={person.id}>
+//          <img src={getImageUrl(person)} alt={person.name} />
+//          <p>
+//             <b>{person.name}:</b>
+//             {" " + person.profession + " "}
+//             known for {person.accomplishment}
+//          </p>
+//       </li>
+//    ));
+
+//    return (
+//       <article>
+//          <h1>Scientists</h1>
+//          <ul>
+//             {chemists.length > 0 && (
+//                <li>
+//                   <h2>Chemists</h2>
+//                   {chemistItems}
+//                </li>
+//             )}
+//             {otherScientists.length > 0 && (
+//                <li>
+//                   <h2>Other Scientists</h2>
+//                   {otherScientistItems}
+//                </li>
+//             )}
+//          </ul>
+//       </article>
+//    );
+// };
 
 //========================================================================================================================================================
+
+// const recipes = [
+//    {
+//       id: "greek-salad",
+//       name: "Greek Salad",
+//       ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+//    },
+//    {
+//       id: "hawaiian-pizza",
+//       name: "Hawaiian Pizza",
+//       ingredients: [
+//          "pizza crust",
+//          "pizza sauce",
+//          "mozzarella",
+//          "ham",
+//          "pineapple",
+//       ],
+//    },
+//    {
+//       id: "hummus",
+//       name: "Hummus",
+//       ingredients: [
+//          "chickpeas",
+//          "olive oil",
+//          "garlic cloves",
+//          "lemon",
+//          "tahini",
+//       ],
+//    },
+// ];
+
 // const App = () => {
+
+// 	const listRecept = recipes.map((recipe) => (
+// 		<div key={recipe.id}>
+// 			<h2>{recipe.name}</h2>
+// 			<ul>
+// 				{recipe.ingredients.map((ingredient) => (
+// 					<li>
+// 						{ingredient}
+// 					</li>
+// 				))}
+// 			</ul>
+// 		</div>
+// 	));
+
 //    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
+//       <div>
+//          <h1>Recipes</h1>
+// 			{listRecept}
+//       </div>
 //    );
 // };
 
-// function Item({ name, isPacked }) {
+//========================================================================================================================================================
+
+// const recipes = [
+//    {
+//       id: "greek-salad",
+//       name: "Greek Salad",
+//       ingredients: ["tomatoes", "cucumber", "onion", "olives", "feta"],
+//    },
+//    {
+//       id: "hawaiian-pizza",
+//       name: "Hawaiian Pizza",
+//       ingredients: [
+//          "pizza crust",
+//          "pizza sauce",
+//          "mozzarella",
+//          "ham",
+//          "pineapple",
+//       ],
+//    },
+//    {
+//       id: "hummus",
+//       name: "Hummus",
+//       ingredients: [
+//          "chickpeas",
+//          "olive oil",
+//          "garlic cloves",
+//          "lemon",
+//          "tahini",
+//       ],
+//    },
+// ];
+
+
+// const Recipe = ({id, name, ingredients}) => {
 // 	return (
-//       <li className="item">{isPacked ? <del>{name + " ✔"}</del> : name}</li>
+// 		<div>
+// 			<h2>{name}</h2>
+// 			<ul>
+// 				{ingredients.map((ingredient) =>(
+// 					<li key={ingredient}>
+// 						{ingredient}
+// 					</li>
+// 				))}
+// 			</ul>
+// 		</div>
 //    );
 // }
 
-//========================================================================================================================================================
-
 // const App = () => {
 //    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
-// };
-
-// function Item({ name, isPacked }) {
-//    return (
-//       <li className="item">
-//          {name} {isPacked && "✔"}
-//       </li>
-//    );
-// }
-
-//========================================================================================================================================================
-
-// const Item = ({ name, isPacked }) => {
-//    let itemContent = name;
-//    if (isPacked) {
-//       itemContent = name + " ✔";
-//    }
-//    return <li className="item">{itemContent}</li>;
-// };
-
-// const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
+//       <div>
+//          <h1>Recipes</h1>
+//          {recipes.map((recipe) => (
+//             <Recipe {...recipe} key={recipe.id} />
+//          ))}
+//       </div>
 //    );
 // };
 
 //========================================================================================================================================================
 
-// const Item = ({ name, isPacked }) => {
-//    let itemContent = name;
-//    if (isPacked) {
-//       itemContent = <del>{name + " ✔"}</del>;
-//    }
-//    return <li className="item">{itemContent}</li>;
-// };
 
-// const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
-// };
+import { Fragment } from 'react';
 
-//========================================================================================================================================================
-
-// const Item = ({ name, isPacked }) => {
-//    return (
-//       <li className="item">
-//          {name} {isPacked ? "✔" : "❌"}
-//       </li>
-//    );
-// };
-
-// const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item isPacked={true} name="Space suit" />
-//             <Item isPacked={true} name="Helmet with a golden leaf" />
-//             <Item isPacked={false} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
-// };
-
-//========================================================================================================================================================
-
-// const Item = ({ name, importance }) => {
-//    return (
-//       <li className="item">
-//          {importance && importance > 0 ? (
-//             <em>
-//                {name} (Важность: {importance})
-//             </em>
-//          ) : (
-//             name
-//          )}
-//       </li>
-//    );
-// };
-
-// const App = () => {
-//    return (
-//       <section>
-//          <h1>Sally Ride's Packing List</h1>
-//          <ul>
-//             <Item importance={9} name="Space suit" />
-//             <Item importance={0} name="Helmet with a golden leaf" />
-//             <Item importance={6} name="Photo of Tam" />
-//          </ul>
-//       </section>
-//    );
-// };
-
-//========================================================================================================================================================
-
-const Drink = ({ name }) => {
-   let part, caffeine, age;
-   if (name === "tea") {
-      part = "leaf";
-      caffeine = "15–70 mg/cup";
-      age = "4,000+ years";
-   } else if (name === "coffee") {
-      part = "bean";
-      caffeine = "80–185 mg/cup";
-      age = "1,000+ years";
-   }
-   return (
-      <section>
-         <h1>{name}</h1>
-         <dl>
-            <dt>Part of plant</dt>
-            <dd>{part}</dd>
-            <dt>Caffeine content</dt>
-            <dd>{caffeine}</dd>
-            <dt>Age</dt>
-            <dd>{age}</dd>
-         </dl>
-      </section>
-   );
+const poem = {
+   lines: [
+      "I write, erase, rewrite",
+      "Erase again, and then",
+      "A poppy blooms.",
+   ],
 };
 
 const App = () => {
    return (
-      <div>
-         <Drink name="tea" />
-         <Drink name="coffee" />
-      </div>
+      <article>
+         {poem.lines.map((line, i) => (
+            <Fragment key={i}>
+               {i > 0 && <hr />}
+               <p>{line}</p>
+            </Fragment>
+         ))}
+      </article>
    );
 };
-
-
-
-
 
 
 export default App;
